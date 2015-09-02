@@ -1,0 +1,47 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+
+              
+        <a class="navbar-brand" href="/">Kingpohony</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="<%= yield(:home) %>"> <%= link_to "Home", root_path %></li>
+
+       <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            Pohony pre automatické brány <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li class=" <%= yield(:Pohony) %>"><%= link_to "Pohony", pohony_path %></li>
+            <li><a href="#">pohon2</a></li>
+            <li><a href="#">pohon3</a></li>
+            <li><a href="#">bla1</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">wau1</a></li>
+          </ul>
+       </li>
+
+
+            <li class="<%= yield(:about) %>"><%= link_to "About", about_path %></li>
+            <li class="<%= yield(:contact) %>"><%= link_to "contact", contact_path %></li>
+          
+        
+      </ul>
+  
+      </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
